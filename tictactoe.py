@@ -1,12 +1,26 @@
 import random
 
-palavrasAdivinhacao = ['banana', 'maca', 'pera', 'uva']
-
-tamanhoArray = len(palavrasAdivinhacao)
-
-sorteio = int(random.randint(0, tamanhoArray))
-
 celulas = ['','','','','','','','','']
+
+def tabuleiro():
+    
+    for y in range(0, 9, 3):
+        for x in range(3):      
+            print("|", end="")
+            if(celulas[x+y]!=''):
+                print(" ", end="")
+                print(celulas[x+y], end="")
+                print(" ", end="")
+            else:
+                print(" ", end="")
+                print(" ", end="")
+                print(" ", end="")
+        print("|")
+        
+
+
+
+
 
 print("BEM VINDO AO JOGO DA VELHA")
 print("\n")
@@ -18,9 +32,11 @@ jogada = input("Jogador X, escolha uma posição conforme o diagrama abaixo:")
 print("\n")
 if (int(jogada) > 0 and int(jogada) < 10):
     celulas[int(jogada )- 1] = "X"
-    print(celulas)
+    tabuleiro()
 else:
     print("Escolha um numero entre 1 e 9")
+
+
 
 
 
