@@ -1,14 +1,12 @@
-# hangman
-Jogo de adivinhação de palavras semelhante ao jogo da forca
+# JOGO DA VELHA
+Jogo de adivinhação de palavras semelhante ao jogo da velha
 
 TODO LIST
 
-(X) criar lista de palavras
-(X) sortear palavra que será adivinhada
-( ) desenhar a tela da forca
-( ) solicitar ao usuário uma letra
-( ) verificar se a letra consta na palavra
-( ) caso conste, atualizar o mostrador da palavra
-( ) caso contrário, atualizar o boneco
-( ) atualizar op numero de tentativas
-( ) verificar se a palavra esta completa ou o numero de tentativas se esgotou
+( X ) criar o tabuleiro do jogo da velha
+() perguntar quem irá jogar
+( ) selecionar a coluna
+( ) selecionar a linha
+( ) verificar se está vazia
+( ) insererir caso não esteja 
+( ) verificar se houve vitoria
