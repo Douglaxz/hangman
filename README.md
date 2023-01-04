@@ -5,6 +5,6 @@ TODO LIST
 
 ( X ) criar o tabuleiro do jogo da velha
 ( X ) perguntar qual a celula que irá ser preenchida
-(   ) verificar se está vazia
-(   ) insererir caso não esteja 
+( X ) verificar se está vazia
+( X  ) insererir caso não esteja 
 (   ) verificar se houve vitoria
