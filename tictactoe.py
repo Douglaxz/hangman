@@ -1,3 +1,5 @@
+import random
+
 #Declaração de variáveis
 celulas = ['','','','','','','','','']
 continuar = True
@@ -178,7 +180,39 @@ def jogodavelha():
             else:
                 jogador = "X"
         
-        
+#funcao forca
+def jogoforca():
+    erros = 0
+    print("forca")
+    #carregar palavras
+    palavras = ['abacate','maca', 'tomate','laranja','tangerina','jaca','amendoim']
+    
+    #sortear palavras
+    sorteio = (random.randint(0, len(palavras)))
+    palavra = palavras[sorteio-1]    
+    letras = []
+
+    #desenhar forca
+    print("-------¬")
+    print("|")
+    print("|")
+    print("|")
+    print("|")
+    print("|")
+
+    #desenhar os espaços da palavra
+    for p in palavra:
+        print(" _ ", end="")
+    
+    letra = int(input("Digite uma letra? "))
+
+
+    print("\n")
+
+    #pedir pro usuario uma letra
+    #verificar se a letra consta na palavra
+    print(palavra)
+
 
 #chamando a função
 print("\n")
@@ -190,7 +224,7 @@ print("\n")
 if(jogo==1):
     jogodavelha()
 else:
-    print("opção invalida")
+    jogoforca()
 
     
     
