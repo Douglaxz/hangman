@@ -5,6 +5,35 @@ jogador = "X"
 jogadaconcluida = False
 
 
+#Função para verificar se houve vitoria de algum jogador
+def vitoria(jogador,celulas):
+    print("VERIFICANDO")
+    vitoria = 0
+    # 1 2 3
+    print("--------------------------------------------------------")
+    print (jogador)
+    print (celulas[0])
+    print (celulas[1])
+    print (celulas[2])
+    print("--------------------------------------------------------")
+    if(celulas[0]==jogador and celulas[1]==jogador and celulas[2]==jogador):
+        vitoria = 1
+    
+    if(vitoria==1):
+        print("--------------------------------------------------------")
+        print("JOGADOR "+jogador+" VENCEU")
+        print("--------------------------------------------------------")
+    
+#condições de vitoria do jogador X
+
+# 4 5 6
+# 7 8 9
+# 1 5 9
+# 1 4 7
+# 2 5 8
+# 3 6 9
+
+
 #Função de criação e atualização do tabuleiro do jogo da velha
 def tabuleiro():
     print ("| Escolha uma posição conforme o diagrama abaixo: |")
@@ -37,6 +66,9 @@ def tabuleiro():
                 print(" ", end="")
                 print(" ", end="")
         print("|")
+
+    
+    
         
 
 
@@ -48,8 +80,9 @@ while (continuar == True):
     print("BEM VINDO AO JOGO DA VELHA")
     print("--------------------------------------------------------")
     print("\n")
+    vitoria(jogador,celulas)
     tabuleiro()
-
+    
     jogada = int(input("Jogador "+jogador+" faça sua jogada: "))
     print("\n")
     if (jogada > 0 and jogada < 10):
