@@ -4,6 +4,8 @@ continuar = True
 jogador = "X"
 jogadaconcluida = False
 rodada = 1
+placarX = 0
+placarY = 0
 
 
 #Função reiniciar o jogo
@@ -24,6 +26,8 @@ def reiniciar():
 
 #Função para verificar se houve vitoria de algum jogador
 def vitoria(jogador,celulas):
+    global placarY
+    global placarX
     vitoria = 0
     
     def celulasPreenchidas(x,y,z,jogador):
@@ -69,7 +73,15 @@ def vitoria(jogador,celulas):
     # se houve alguma condição de vitória, irá aparecer a mensagem
     if(vitoria==1):
         resposta = ""
-        print("JOGADOR "+jogador+" VENCEU")
+        print("JOGADOR '"+jogador+"' VENCEU")
+        if(jogador=="X"):
+            placarX = int(placarX + 1)
+        else:
+            placarY = int(placarY + 1)
+
+        print("------------------PLACAR--------------------------------")
+        print("VITÓRIAS DO JOGADOR 'X' :" + str(placarX))
+        print("VITÓRIAS DO JOGADOR 'Y' :" + str(placarY))            
         print("--------------------------------------------------------")
         while(resposta==""):
             resposta = input("Deseja jogar novamente: 'S/N'")
@@ -83,6 +95,7 @@ def vitoria(jogador,celulas):
                 print("Resposta inválida")
                 resposta = ""
 
+        print("--------------------------------------------------------")
 
 
 #Função de criação e atualização do tabuleiro do jogo da velha
@@ -117,9 +130,7 @@ def tabuleiro():
 
 #Cabeçalho do jogo    
 print("\n")
-print("--------------------------------------------------------")
-print("BEM VINDO AO JOGO DA VELHA")
-print("--------------------------------------------------------")
+print("-----------BEM VINDO AO JOGO DA VELHA-----------")
 print("\n")
 
 #Função do jogo da velha
@@ -128,7 +139,7 @@ def jogodavelha():
     global jogador
     global celulas
     while (rodada < 10):
-        vitoria(jogador,celulas)
+        
         print("\n")
         print("--------------------------------------------------------")
         print("RODADA "+ str(rodada))
@@ -142,6 +153,7 @@ def jogodavelha():
             if (celulas[jogada- 1])=="":
                 celulas[jogada - 1] = jogador
                 jogadaconcluida = True
+                rodada = int(rodada) + 1
             elif (celulas[jogada- 1])!="":
                 print("Essa celula já está preenchida")    
                 jogadaconcluida = False
@@ -156,13 +168,16 @@ def jogodavelha():
             print("Escolha um numero entre 1 e 9")
             print("\n")
 
+        #verificação de vitória
+        vitoria(jogador,celulas)
+
         #função para alterancia de jogadores
         if(jogadaconcluida == True):
             if(jogador == "X"):
                 jogador = "O"
             else:
                 jogador = "X"
-        rodada = int(rodada) + 1
+        
         
 
 #chamando a função
