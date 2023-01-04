@@ -22,8 +22,6 @@ def reiniciar():
     rodada = 1
 
 
-
-
 #Função para verificar se houve vitoria de algum jogador
 def vitoria(jogador,celulas):
     global placarY
@@ -142,7 +140,7 @@ def jogodavelha():
         
         print("\n")
         print("--------------------------------------------------------")
-        print("RODADA "+ str(rodada))
+        print("------------- RODADA "+ str(rodada)+"---------------")
         print("--------------------------------------------------------")
         
         tabuleiro()
