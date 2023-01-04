@@ -190,7 +190,7 @@ def jogoforca():
     #sortear palavras
     sorteio = (random.randint(0, len(palavras)))
     palavra = palavras[sorteio-1]    
-    letras = []
+    letras = ['aaa']
 
     #desenhar forca
     print("-------¬")
