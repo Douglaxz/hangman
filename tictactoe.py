@@ -77,9 +77,14 @@ def vitoria(jogador,celulas):
         else:
             placarY = int(placarY + 1)
 
-        print("------------------PLACAR--------------------------------")
-        print("VITÓRIAS DO JOGADOR 'X' :" + str(placarX))
-        print("VITÓRIAS DO JOGADOR 'Y' :" + str(placarY))            
+        print("-------------------------PLACAR------------------------")
+        print("          JOGADOR 'X'", end="")
+        print("         |", end="")
+        print("          JOGADOR 'O'")
+        print("--------------------------------------------------------")
+        print("              "+str(placarX),end="")
+        print("               |", end="")
+        print("              "+str(placarY))            
         print("--------------------------------------------------------")
         while(resposta==""):
             resposta = input("Deseja jogar novamente: 'S/N'")
@@ -92,7 +97,6 @@ def vitoria(jogador,celulas):
             else:
                 print("Resposta inválida")
                 resposta = ""
-
         print("--------------------------------------------------------")
 
 
@@ -125,6 +129,7 @@ def tabuleiro():
                 print(" ", end="")
                 print(" ", end="")
         print("|")
+    print("-------------------------------------------------")
 
 #Cabeçalho do jogo    
 print("\n")
@@ -138,10 +143,7 @@ def jogodavelha():
     global celulas
     while (rodada < 10):
         
-        print("\n")
-        print("--------------------------------------------------------")
-        print("------------- RODADA "+ str(rodada)+"---------------")
-        print("--------------------------------------------------------")
+        print("-------------------RODADA "+ str(rodada)+"---------------------")
         
         tabuleiro()
         

@@ -6,5 +6,10 @@ TODO LIST
 ( X ) criar o tabuleiro do jogo da velha
 ( X ) perguntar qual a celula que irá ser preenchida
 ( X ) verificar se está vazia
-( X  ) insererir caso não esteja 
-(   ) verificar se houve vitoria
+( X ) insererir caso não esteja 
+( x ) verificar se houve vitoria
+(   ) Verificar chamada de função
+(   ) Melhorar o layout do placar
+(   ) Verificar bugs de entrada de celulas
+
+
