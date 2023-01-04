@@ -66,15 +66,22 @@ def vitoria(jogador,celulas):
     if(vitoria == 0):
         vitoria = celulasPreenchidas(2,5,8,jogador)    
 
+    # se houve alguma condição de vitória, irá aparecer a mensagem
     if(vitoria==1):
+        resposta = ""
         print("JOGADOR "+jogador+" VENCEU")
         print("--------------------------------------------------------")
-        resposta = input("Deseja jogar novamente: 'SIM/NÃO'")
-        if(resposta=='não'):
-            exit()
-        else:
-            reiniciar()
-            jogodavelha()
+        while(resposta==""):
+            resposta = input("Deseja jogar novamente: 'S/N'")
+            resposta = resposta.upper()
+            if(resposta=='N'):
+                exit()
+            elif (resposta=='S'):
+                reiniciar()
+                jogodavelha()
+            else:
+                print("Resposta inválida")
+                resposta = ""
 
 
 
@@ -121,11 +128,12 @@ def jogodavelha():
     global jogador
     global celulas
     while (rodada < 10):
+        vitoria(jogador,celulas)
         print("\n")
         print("--------------------------------------------------------")
         print("RODADA "+ str(rodada))
         print("--------------------------------------------------------")
-        vitoria(jogador,celulas)
+        
         tabuleiro()
         
         jogada = int(input("Jogador '"+jogador+"' faça sua jogada: "))
@@ -155,6 +163,7 @@ def jogodavelha():
             else:
                 jogador = "X"
         rodada = int(rodada) + 1
+        
 
 #chamando a função
 jogodavelha()
