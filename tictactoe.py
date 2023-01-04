@@ -7,31 +7,55 @@ jogadaconcluida = False
 
 #Função para verificar se houve vitoria de algum jogador
 def vitoria(jogador,celulas):
-    print("VERIFICANDO")
     vitoria = 0
-    # 1 2 3
-    print("--------------------------------------------------------")
-    print (jogador)
-    print (celulas[0])
-    print (celulas[1])
-    print (celulas[2])
-    print("--------------------------------------------------------")
-    if(celulas[0]==jogador and celulas[1]==jogador and celulas[2]==jogador):
-        vitoria = 1
     
+    def celulasPreenchidas(x,y,z,jogador):
+        if(celulas[x]==jogador and celulas[y]==jogador and celulas[z]==jogador):
+            return(1)
+
+
+    #condições de vitoria do jogador
+    
+    #vitoria em linha
+    # 1 2 3
+    if(vitoria == 0):
+        vitoria = celulasPreenchidas(0,1,2,jogador)
+    # 4 5 6
+    if(vitoria == 0):
+        vitoria = celulasPreenchidas(3,4,5,jogador)       
+    # 7 8 9
+    if(vitoria == 0):
+        vitoria = celulasPreenchidas(6,7,8,jogador)    
+    
+    #vitoria em transversal
+    # 1 5 9
+    if(vitoria == 0):
+        vitoria = celulasPreenchidas(0,4,8,jogador)    
+    # 3 5 7
+    if(vitoria == 0):
+        vitoria = celulasPreenchidas(2,4,6,jogador)    
+
+    #vitoria em coluna
+    # 1 4 7
+    if(vitoria == 0):
+        vitoria = celulasPreenchidas(0,3,6,jogador)    
+    
+    # 2 5 8
+    if(vitoria == 0):
+        vitoria = celulasPreenchidas(1,4,7,jogador)        
+    # 3 6 9
+    if(vitoria == 0):
+        vitoria = celulasPreenchidas(2,5,8,jogador)    
+
     if(vitoria==1):
         print("--------------------------------------------------------")
         print("JOGADOR "+jogador+" VENCEU")
         print("--------------------------------------------------------")
+        exit()
     
-#condições de vitoria do jogador X
 
-# 4 5 6
-# 7 8 9
-# 1 5 9
-# 1 4 7
-# 2 5 8
-# 3 6 9
+
+
 
 
 #Função de criação e atualização do tabuleiro do jogo da velha
@@ -103,11 +127,11 @@ while (continuar == True):
         print("Escolha um numero entre 1 e 9")
         print("\n")
 
-    if(jogadaconcluida == True):
-        if(jogador == "X"):
-            jogador = "O"
-        else:
-            jogador = "X"
+    #if(jogadaconcluida == True):
+    #    if(jogador == "X"):
+    #        jogador = "O"
+    #    else:
+    #        jogador = "X"
 
     
     
