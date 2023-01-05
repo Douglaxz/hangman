@@ -1,5 +1,5 @@
 # JOGO DA VELHA
-Jogo de adivinhação de palavras semelhante ao jogo da velha
+Jogo estilo jogo da velha (tictactoe) de palavras semelhante ao jogo da velha
 
 TODO LIST
 
