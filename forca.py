@@ -35,7 +35,7 @@ def desenharForca(erros):
         print("-------¬")
         print("|      O")
         print("|      |")
-        print("|     /")
+        print("|     |")
         print("|")
         print("|")
 
@@ -43,42 +43,48 @@ def desenharForca(erros):
         print("-------¬")
         print("|      O")
         print("|      |")
-        print("|     / \'")
+        print("|     | |'")
         print("|")
         print("|")
 
     if(erros==5):
         print("-------¬")
         print("|      O")
-        print("|      |\'")
-        print("|     / \'")
+        print("|      |--")
+        print("|     | |'")
         print("|")
         print("|")
 
     if(erros==6):
         print("-------¬")
         print("|      O")
-        print("|     /|\'")
-        print("|     / \'")
+        print("|    --|--")
+        print("|     | |'")
         print("|")
         print("|")  
     
     
     print("\n")
 
+def finalDeJogoPerdeu(palavra):
+    print("|----------------- PERDEU ! -----------------|")
+    print("A PALAVRA SECRETA ERA: "+ palavra.upper())
+    print("\n")
+
+def finalDeJogoGanhou(palavra):
+    print("|----------------- VENCEU ! -----------------|")
+    print("A PALAVRA SECRETA ERA: "+ palavra.upper())
+    print("\n")
 
 #funcao forca
 def jogoforca():
     erros = 0
     #sortear palavras   
     sorteio = (random.randint(0, len(palavras)))
-    palavra = palavras[sorteio-1]    
+    palavra = palavras[sorteio-1]
     letrasCorretas = []    
     letrasErradas = []    
-
     
-    
-
     #desenhar os espaços da palavra em um vetor vazio, que irá receber as letras acertadas
     for p in palavra:
         letrasCorretas.append("_")
@@ -87,15 +93,17 @@ def jogoforca():
         print(letra + " ", end="")
     
     print("\n")
-    #pedir pro usuario uma letra
+    
     while(erros < 6):
+        #chamada da função de desenho da forca
         desenharForca(erros)
 
+        #criação do placar
+        print("|----------------- PLACAR -----------------|")
         print("|    ACERTOS     | ", end="")
         for letra in letrasCorretas:
             print(letra, end="")
             print(" ", end="")
-
         print("\n")
         print("| LETRAS ERRADAS | ", end="")
         for letra in letrasErradas:
@@ -105,12 +113,13 @@ def jogoforca():
         print("|      ERROS     | ", end="")
         print(erros)
         print("\n")     
+
+        #pedir pro usuario uma letra
         letra = (input("Digite uma letra: "))
-
-
-        contador = 0
         
+
         #verificar se a letra consta na palavra
+        contador = 0
         if(letra in palavra):
             for p in palavra:
                 if(p == letra):
@@ -120,10 +129,20 @@ def jogoforca():
             if(letra not in letrasErradas):
                 letrasErradas.append(letra.upper())
             erros = erros + 1
-
-
         print("\n")
-                
+        
+        #verificar se houve vitoria
+        novapalavra = ''.join(letrasCorretas)
+        
+        if(novapalavra == palavra.upper()):
+            finalDeJogoGanhou(palavra)
+            exit()
+
+
+        #verificar se houve derrota
+        if(erros==6):
+            desenharForca(erros)
+            finalDeJogoPerdeu(palavra)
 
 
 
