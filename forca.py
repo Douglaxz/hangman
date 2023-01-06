@@ -129,27 +129,20 @@ def jogoforca():
             #pedir pro usuario uma letra
             invalido = True
             while (invalido==True):
-                
+           
+                invalido=False
+
                 letra = (input("Digite uma letra: "))
                 if(len(letra)!=1):
                     print("Você digitou mais do que 1 letra")
-                    invalido==True
-                    print("passo 1")
-                else:
-                    invalido==False
-                
+                    invalido=True                    
+                    
+
                 if(letra.isalpha()==False):
                     print("Você digitou um caractere invalido")
-                    invalido==True
-                    print("passo 2")
-                else:
-                    invalido==False
+                    invalido=True
                 
-                print(len(letra))
-                print(letra.isalpha())
-                print(invalido)
 
-                
                 
                 
             
