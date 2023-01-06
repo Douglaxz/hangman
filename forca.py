@@ -1,9 +1,17 @@
 import random
-
-#Declaração de váriáveis
-
-palavras = ['abacate','maca', 'tomate','laranja','tangerina','jaca','amendoim']
+#Declaração de váriáveis e vetores
 continuar = True
+palavras = []
+
+#Carregando arquivo txt  com palavras
+
+palavras = open("palavrasforca.txt","r", encoding="utf-8").read().splitlines()
+
+#colocando todas as letras em maiusculo
+for palavra in palavras:
+    palavraMaiuscula = palavra.upper()
+    palavras.append(palavraMaiuscula)
+    palavras.remove(palavra)
 
 #desenhar forca
 def desenharForca(erros):
@@ -43,7 +51,7 @@ def desenharForca(erros):
         print("-------¬")
         print("|      O")
         print("|      |")
-        print("|     | |'")
+        print("|     | |")
         print("|")
         print("|")
 
@@ -93,6 +101,7 @@ def jogoforca():
     #sortear palavras   
     sorteio = (random.randint(0, len(palavras)))
     palavra = palavras[sorteio-1]
+    print(palavra)
     letrasCorretas = []    
     letrasErradas = []    
     
