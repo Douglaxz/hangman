@@ -1,7 +1,9 @@
 # Menu Principal
 ( X ) Tela de Seleção de jogos
-(   ) Incluir a opção do jogo pedra papel e tesoura
+( X ) Incluir a opção do jogo pedra papel e tesoura
 (   ) Incluir a opção do jogo adivinhação de números
+(   ) corrigir problema na chamada dos jogos
+
 
 
 # JOGO DA VELHA - TODO LIST
@@ -31,11 +33,11 @@ Jogo de adivinhação de palavras semelhante ao jogo da forca
 ( X ) alterar mode de carragamento de palavras para um arquivo txt
 
 # JOGO PEDRA PAPEL E TESOURA - TODO LIST
-(   ) criar as opções em um  array (Pedra/Papel e Tesoura)
-(   ) sortear uma das 3 opções
-(   ) solicitar a opção do usuario
-(   ) ver quem ganhou
-(   ) informar na tela
+( X ) criar as opções em um  array (Pedra/Papel e Tesoura)
+( X ) sortear uma das 3 opções
+( X ) solicitar a opção do usuario
+( X ) ver quem ganhou
+( X ) informar na tela
 
 # JOGO ADIVINHAÇÃO DE NUMEROS, DE 1 A 100
 (   ) sortear um numero

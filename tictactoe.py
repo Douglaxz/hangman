@@ -182,7 +182,8 @@ def jogodavelha():
         
 
 
-
+#chamada do jogo
+#jogodavelha()
     
     
 

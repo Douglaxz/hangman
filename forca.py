@@ -186,4 +186,4 @@ def jogoforca():
 
 
 
-jogoforca()
+#jogoforca()
