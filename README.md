@@ -2,7 +2,7 @@
 ( X ) Tela de Seleção de jogos
 ( X ) Incluir a opção do jogo pedra papel e tesoura
 (   ) Incluir a opção do jogo adivinhação de números
-(   ) corrigir problema na chamada dos jogos
+( X ) corrigir problema na chamada dos jogos
 
 ----------------------------------------------------------------------------------------
 # JOGO DA VELHA - TODO LIST

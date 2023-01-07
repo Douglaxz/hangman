@@ -1,4 +1,7 @@
-import random
+#import de dependencias
+import random #para poder utilizar a função random
+import sys #para utilizar args
+
 #Declaração de váriáveis e vetores
 continuar = True
 palavras = []
@@ -186,4 +189,7 @@ def jogoforca():
 
 
 
-#jogoforca()
+#chamada da função principal, diretamente do arquivo
+chamada = sys.argv[0]
+if(chamada =="forca.py"):
+    jogoforca()

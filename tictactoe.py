@@ -1,4 +1,5 @@
-import random
+#import de dependencias
+import sys #para utilizar args
 
 #Declaração de variáveis
 celulas = ['','','','','','','','','']
@@ -133,16 +134,18 @@ def tabuleiro():
         print("|")
     print("-------------------------------------------------")
 
-#Cabeçalho do jogo    
-print("\n")
-print("-----------BEM VINDO AO JOGO DA VELHA-----------")
-print("\n")
+
 
 #Função do jogo da velha
 def jogodavelha():
     global rodada
     global jogador
     global celulas
+
+    #Cabeçalho do jogo    
+    print("\n")
+    print("-----------BEM VINDO AO JOGO DA VELHA-----------")
+    print("\n")
     while (rodada < 10):
         
         print("-------------------RODADA "+ str(rodada)+"---------------------")
@@ -181,9 +184,10 @@ def jogodavelha():
                 jogador = "X"
         
 
-
-#chamada do jogo
-#jogodavelha()
+#chamada da função principal, diretamente do arquivo
+chamada = sys.argv[0]
+if(chamada =="tictactoe.py"):
+    jogodavelha()
     
     
 
