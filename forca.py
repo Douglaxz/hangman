@@ -153,10 +153,6 @@ def jogoforca():
                 if(letra.isalpha()==False):
                     print("Você digitou um caractere invalido")
                     invalido=True
-                
-
-                
-                
             
 
             #verificar se a letra consta na palavra
