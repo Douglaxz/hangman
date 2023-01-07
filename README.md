@@ -4,8 +4,7 @@
 (   ) Incluir a opção do jogo adivinhação de números
 (   ) corrigir problema na chamada dos jogos
 
-
-
+----------------------------------------------------------------------------------------
 # JOGO DA VELHA - TODO LIST
 Jogo estilo jogo da velha
 
@@ -18,6 +17,7 @@ Jogo estilo jogo da velha
 ( X ) Melhorar o layout do placar
 ( X ) Verificar bugs de entrada de celulas
 
+----------------------------------------------------------------------------------------
 # JOGO DA FORCA - TODO LIST
 Jogo de adivinhação de palavras semelhante ao jogo da forca
 
@@ -32,6 +32,7 @@ Jogo de adivinhação de palavras semelhante ao jogo da forca
 ( X ) verificar se a palavra esta completa ou o numero de tentativas se esgotou
 ( X ) alterar mode de carragamento de palavras para um arquivo txt
 
+----------------------------------------------------------------------------------------
 # JOGO PEDRA PAPEL E TESOURA - TODO LIST
 ( X ) criar as opções em um  array (Pedra/Papel e Tesoura)
 ( X ) sortear uma das 3 opções
@@ -39,12 +40,10 @@ Jogo de adivinhação de palavras semelhante ao jogo da forca
 ( X ) ver quem ganhou
 ( X ) informar na tela
 
+----------------------------------------------------------------------------------------
 # JOGO ADIVINHAÇÃO DE NUMEROS, DE 1 A 100
 (   ) sortear um numero
 (   ) perguntar ao usuário um numero
 (   ) verificar se acertou
 (   ) se não, dar dicas se é maior ou menor que o sorteio
 (   ) contar as chances que já foram 
-
-
-

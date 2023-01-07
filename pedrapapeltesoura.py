@@ -1,5 +1,6 @@
 #import de dependencias
 import random
+import sys
 
 def pedrapapeltesoura():
     #declaração de variáveis
@@ -91,18 +92,22 @@ def pedrapapeltesoura():
     print(resultado)
 
 #função principal
-pedrapapeltesoura()
-resposta = ""
-while(resposta==""):
-    print("\n")
-    resposta = input("Deseja jogar novamente: 'S/N'")
-    resposta = resposta.upper()
-    if(resposta=='N'):
-        exit()
-    elif (resposta=='S'):
-        pedrapapeltesoura()
-        resposta = ""
-    else:
-        print("Resposta inválida")
-        resposta = ""
-print("--------------------------------------------------------")
+
+
+chamada = sys.argv[0]
+if(chamada =="pedrapapeltesoura.py"):
+    pedrapapeltesoura()
+    resposta = ""
+    while(resposta==""):
+        print("\n")
+        resposta = input("Deseja jogar novamente: 'S/N'")
+        resposta = resposta.upper()
+        if(resposta=='N'):
+            exit()
+        elif (resposta=='S'):
+            pedrapapeltesoura()
+            resposta = ""
+        else:
+            print("Resposta inválida")
+            resposta = ""
+    print("--------------------------------------------------------")

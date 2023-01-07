@@ -12,10 +12,10 @@ jogo = int(input("Qual a sua opção? "))
 print("\n")
 
 
-#match jogo:
+match jogo:
 #    case 1: 
 #        tictactoe.jogodavelha()
 #    case 2: 
 #        forca.jogoforca()
-#    case 3: 
-#        pedrapapeltesoura.pedrapapeltesoura()
+    case 3: 
+        pedrapapeltesoura.pedrapapeltesoura()
