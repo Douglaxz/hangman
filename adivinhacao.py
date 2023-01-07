@@ -13,37 +13,35 @@ BOLD    = "\033[;1m"
 REVERSE = "\033[;7m"
 
 def jogoAdivinhacao():
+    print("\n")
+    print("-----------BEM VINDO AO JOGO DA ADIVINHAÇÃO DE NÚMEROS-----------")
+    print("\n")    
     sorteio = (random.randint(1, 50))
     continuar = True
-    rodada = 1
-    while(continuar == True):
-        print("\n")
-        for i in range(50):
-            print(i+1, end="")
-            print(" ", end="")
-        
-        print("\n")
-        #print(BOLD + RED + "ERROR!" + RESET + "Something went wrong...")
-        print(sorteio)
-        print("------------------- RODADA "+str(rodada)+"-------------------------------")
-        palpite = int(input("Digite um número entre 1 e 50: "))
-        if(palpite == sorteio):
-            print(GREEN+ "PARABÉNS! " + RESET + "Você acertou o número...")
-        else:
-            print(RED+ "ERROU! " + RESET + "Tente novamente")
-            if(palpite < sorteio):
-                print(BLUE+ "DICA " + RESET + "O número é maior que "+ str(palpite))
+    acerto = False
+    while(continuar == True):        
+        rodada = 1
+        while(rodada < 11):
+            print("-------------------"+CYAN + "RODADA "+str(rodada)+RESET+"-------------------------------")
+            
+            palpite = int(input("Digite um número entre 1 e 50: "))
+            if(palpite == sorteio):
+                print(GREEN+ "PARABÉNS! " + RESET + "Você acertou o número...")
+                break
             else:
-                print(BLUE+ "DICA " + RESET + "O número é menor que "+ str(palpite))
-        print("--------------------------------------------------------")
-        print("\n")
+                print(RED+ "ERROU! " + RESET + "Tente novamente")
+                if(palpite < sorteio):
+                    print(BLUE+ "DICA " + RESET + "O número é maior que "+ str(palpite))
+                else:
+                    print(BLUE+ "DICA " + RESET + "O número é menor que "+ str(palpite))
+            rodada = rodada + 1
 
+        print("-------------------------------------------------------------------------")
         resposta = input("Deseja tentar adivinhar novamente: 'S/N'")
         resposta = resposta.upper()
         if(resposta=='N'):
             exit()
-        print("--------------------------------------------------------")
-        rodada = rodada + 1
+        
 
 
 
