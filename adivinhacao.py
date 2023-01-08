@@ -3,6 +3,7 @@
 #Contato: douglaxz@hotmail.com
 #GitHub: https://github.com/Douglaxz/hangman
 #Linguagem: Python
+#Descrição do projeto: Jogo no estilo adivinhação de número, com dicas
 
 #Instruções para utilização
 #1 - No console, digite: python adivinhacao.py

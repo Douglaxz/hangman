@@ -1,3 +1,13 @@
+# Ficha técnica
+#Desenvolvedor : Douglas Amaral
+#Contato: douglaxz@hotmail.com
+#GitHub: https://github.com/Douglaxz/hangman
+#Linguagem: Python
+#Descrição do projeto: Jogo no estilo jogo da velha
+
+#Instruções para utilização
+#1 - No console, digite: python tictactoe.py
+
 #import de dependencias
 import sys #para utilizar args
 
