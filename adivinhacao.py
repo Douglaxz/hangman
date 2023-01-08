@@ -31,9 +31,9 @@ def jogoAdivinhacao():
             else:
                 print(RED+ "ERROU! " + RESET + "Tente novamente")
                 if(palpite < sorteio):
-                    print(BLUE+ "DICA " + RESET + "O número é maior que "+ str(palpite))
+                    print(BLUE+ "DICA: " + RESET + "O número é maior que "+ str(palpite))
                 else:
-                    print(BLUE+ "DICA " + RESET + "O número é menor que "+ str(palpite))
+                    print(BLUE+ "DICA: " + RESET + "O número é menor que "+ str(palpite))
             rodada = rodada + 1
 
         print("-------------------------------------------------------------------------")
