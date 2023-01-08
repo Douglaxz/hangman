@@ -1,7 +1,19 @@
+# Ficha técnica
+Desenvolvedor : Douglas Amaral
+Contato: douglaxz@hotmail.com
+GitHub: https://github.com/Douglaxz/hangman
+Linguagem: Python
+
+Instruções para utilização
+1 - No console, digite: python principal.py
+2 - Selecione o jogo ao qual deseja jogar
+3 - Jogos disponiveis: Jogo da velha | Forca | Pedra Papel Tesoura | Adivinhação de números
+
+
 # Menu Principal
 ( X ) Tela de Seleção de jogos
 ( X ) Incluir a opção do jogo pedra papel e tesoura
-(   ) Incluir a opção do jogo adivinhação de números
+( X  ) Incluir a opção do jogo adivinhação de números
 ( X ) corrigir problema na chamada dos jogos
 
 ----------------------------------------------------------------------------------------
